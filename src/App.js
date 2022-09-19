@@ -1,22 +1,32 @@
-// import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Counter from './components/Count';
-import {useState}  from 'react';
-import Header from './components/header'
+
 function App() {
-let [count,setCount]=useState(0)
-
-const addCount=()=>{
-setCount(count+1)
-}
-  let data='alen devassy'
   return (
-    <div>
-      <button onClick={addCount}>click</button>
-      <Header data={data}/>
-      <Counter title='count' count={count}/>
+    <div className="app">
+      <div className="mainHeading">
+        <h1>ToDo List</h1>
+      </div>
+      <div className="subHeading">
+        <br />
+        <h2>Whoop, it's Wednesday 🌝 ☕ </h2>
+      </div>
+      <div className="input">
+        <input type="text" placeholder="🖊️ Add item..." />
+        <i className="fas fa-plus"></i>
+      </div>
+      <div className="todos">
+        <div className="todo">
+          <div className="left">
+            <input type="checkbox" name="" id="" />
+            <p>Rect tutorial</p>
+          </div>
+          <div className="right">
+            <i className="fas fa-times"></i>
+          </div>
+        </div>
+      </div>
     </div>
-
   );
 }
 
